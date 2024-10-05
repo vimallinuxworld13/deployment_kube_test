@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: myd
+  name: myd
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: myd
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: myd
+    spec:
+      containers:
+      - image: httpd
+        name: httpd
+        resources: {}
+status: {}
+
